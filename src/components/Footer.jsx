@@ -1,13 +1,13 @@
-import { Github, Instagram, Linkedin, Mail, Youtube } from 'lucide-react'
+import { Download, Github, Linkedin, Mail, Youtube } from 'lucide-react'
 import { profile, socials } from '../data'
+import { cv } from '../lib/content'
 
 const items = [
   { label: 'YouTube', href: socials.youtube, Icon: Youtube, primary: true },
   { label: 'GitHub', href: socials.github, Icon: Github },
   { label: 'LinkedIn', href: socials.linkedin, Icon: Linkedin },
-  { label: 'Instagram', href: socials.instagram, Icon: Instagram },
   { label: 'E-posta', href: socials.mail, Icon: Mail },
-]
+].filter((i) => i.href !== undefined)
 
 export default function Footer() {
   return (
@@ -16,19 +16,22 @@ export default function Footer() {
         Birlikte bir şey üretelim.
       </h2>
       <div className="mt-10 flex flex-wrap justify-center gap-3">
-        {items.map(({ label, href, Icon, primary }) => (
-          <a
-            key={label}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium transition ${
-              primary ? 'bg-white text-black hover:bg-neutral-200' : 'glass hover:bg-white/10'
-            }`}
-          >
-            <Icon size={18} /> {label}
+        {cv && (
+          <a href={cv} download="CV.pdf" className="flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-black hover:bg-neutral-200">
+            <Download size={18} /> CV indir
           </a>
-        ))}
+        )}
+        {items.filter((i) => i.href || i.label === 'YouTube').map(({ label, href, Icon }) =>
+          href ? (
+            <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="glass flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium transition hover:bg-white/10">
+              <Icon size={18} /> {label}
+            </a>
+          ) : (
+            <span key={label} title="Yakında" className="glass flex cursor-default items-center gap-2 rounded-full px-5 py-3 text-sm font-medium text-neutral-500">
+              <Icon size={18} /> {label} · yakında
+            </span>
+          )
+        )}
       </div>
       <p className="mt-16 text-sm text-neutral-600">© {new Date().getFullYear()} {profile.first} {profile.last}</p>
     </footer>

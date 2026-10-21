@@ -1,0 +1,13 @@
+{
+  "title": "Roket Projesi",
+  "summary": "Gövde, kanatçık ve burun konisi tasarımı; itki analizi ve uçuş simülasyonu.",
+  "status": "in-progress",
+  "progress": 70,
+  "github": "https://github.com/besirozdemir",
+  "tags": [
+    "SolidWorks",
+    "OpenRocket",
+    "MATLAB"
+  ],
+  "visual": "rocket"
+}

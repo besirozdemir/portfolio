@@ -1,0 +1,12 @@
+{
+  "title": "Piston Mekanizması",
+  "summary": "Krank-biyel sisteminin kinematik modeli ve animasyonu.",
+  "status": "completed",
+  "progress": 100,
+  "github": "https://github.com/besirozdemir",
+  "tags": [
+    "Kinematik",
+    "SolidWorks"
+  ],
+  "visual": "piston"
+}

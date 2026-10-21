@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { profile } from '../data'
+import { photo } from '../lib/content'
 
 export default function Hero() {
   const ref = useRef(null)
@@ -43,6 +44,16 @@ export default function Hero() {
         <div className="absolute h-[60vmin] w-[60vmin] rounded-full bg-sky-500/10 blur-[120px]" />
 
         <motion.div style={{ scale, opacity, y }} className="relative z-10 px-4 text-center">
+          {photo && (
+            <motion.img
+              src={photo}
+              alt={`${profile.first} ${profile.last}`}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+              className="mx-auto mb-6 h-24 w-24 rounded-full object-cover ring-2 ring-white/20 ring-offset-4 ring-offset-black md:h-36 md:w-36"
+            />
+          )}
           <motion.h1
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}

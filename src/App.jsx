@@ -1,23 +1,27 @@
+import { useEffect } from 'react'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import { MotionConfig } from 'framer-motion'
 import Nav from './components/Nav'
-import Hero from './components/Hero'
-import Projects from './components/Projects'
-import CADGallery from './components/CADGallery'
-import Experience from './components/Experience'
-import Skills from './components/Skills'
 import Footer from './components/Footer'
+import Home from './pages/Home'
+import GalleryPage from './pages/GalleryPage'
+
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => { window.scrollTo(0, 0) }, [pathname])
+  return null
+}
 
 export default function App() {
   return (
     <MotionConfig reducedMotion="user">
+      <ScrollToTop />
       <Nav />
-      <main>
-        <Hero />
-        <Projects />
-        <CADGallery />
-        <Experience />
-        <Skills />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/galeri" element={<GalleryPage />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
       <Footer />
     </MotionConfig>
   )
