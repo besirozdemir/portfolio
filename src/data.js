@@ -16,8 +16,8 @@ export const socials = {
 
 // start/end: 'YYYY-AA'. Sıralama otomatik (en yeni üstte).
 export const experiences = [
-  { start: '2022-03', end: '2022-08', role: 'Mechanical Leader', team: 'MAVERA UAV Team', event: 'Teknofest İHA Yarışması · Lise Kategorisi', skills: ['CAD', 'Teknik Resim'] },
   { start: '2021-10', end: '2022-08', role: 'Team Leader', team: 'HÜRKUŞ Roket Takımı', event: 'Teknofest Roket Yarışması · Lise Kategorisi', skills: ['CAD', 'Takım Liderliği'] },
+  { start: '2022-03', end: '2022-08', role: 'Mechanical Leader', team: 'MAVERA UAV Team', event: 'Teknofest İHA Yarışması · Lise Kategorisi', skills: ['CAD', 'Teknik Resim'] },
   { start: '2021-05', end: '2024-07', role: 'Öğrenci', team: 'Deneyap Teknoloji Atölyeleri', event: 'Türkiye Teknoloji Takımı Vakfı', skills: ['CAD', 'Fusion 360'] },
   { start: '2020-10', end: '2021-11', role: 'CAD Designer', team: 'Tanyeli UAV Team', event: 'Teknofest İHA Yarışması · Lise Kategorisi', skills: ['CAD', 'SolidWorks'] },
   { start: '2020-01', end: '2020-10', role: 'CAD & Mechanical Leader', team: 'Şahkartallar UAV Team', event: 'TÜBİTAK 2020 İHA Yarışması', skills: ['CAD', 'SolidWorks'] },
