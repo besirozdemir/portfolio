@@ -26,12 +26,12 @@ export const experiences = [
 
 // level: 1 Beginner · 2 Intermediate · 3 Advanced   (label ile yazıyı değiştirebilirsin)
 export const tools = [
-  { name: 'SolidWorks', level: 3, label: 'CSWA Certified' },
-  { name: 'CATIA V5', level: 2 },
-  { name: 'ANSYS Mechanical', level: 2 },
-  { name: 'XFLR5', level: 2 },
-  { name: 'MATLAB', level: 2 },
-  { name: 'OpenRocket', level: 2 },
+  { name: 'SolidWorks', level: 2, label: 'CSWA Certified' },
+  { name: 'CATIA V5', level: 1 },
+  { name: 'ANSYS Mechanical', level: 1 },
+  { name: 'XFLR5', level: 1 },
+  { name: 'MATLAB', level: 1 },
+  { name: 'OpenRocket', level: 3 },
   { name: 'Python', level: 2 },
   { name: 'Microsoft Excel', level: 1 },
 ]
