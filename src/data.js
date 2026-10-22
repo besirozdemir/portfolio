@@ -1,8 +1,8 @@
 // ✏️ Kişisel bilgiler burada. Galeri/proje/CV/fotoğraf → src/content klasörü (README.md'ye bak)
 
 export const profile = {
-  first: 'Ercüment',
-  last: 'Soyadın',            // <- adını/soyadını buradan düzelt
+  first: 'Beşir',
+  last: 'ÖZDEMİR',            // <- adını/soyadını buradan düzelt
   title: 'Mechanical Engineer',
 }
 
