@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Box } from 'lucide-react'
+import ThumbMedia from './ThumbMedia'
 import ModelViewer from './ModelViewer'
 
 export default function GalleryCard({ item, onOpen }) {
@@ -20,11 +20,7 @@ export default function GalleryCard({ item, onOpen }) {
       className="glass group overflow-hidden rounded-3xl text-left"
     >
       <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-neutral-900 to-black">
-        {item.thumb ? (
-          <img src={item.thumb} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
-        ) : (
-          <div className="absolute inset-0 flex items-center justify-center text-neutral-600"><Box size={48} /></div>
-        )}
+        <ThumbMedia item={item} />
         {hover && item.model && (
           <div className="absolute inset-0 bg-black/85"><ModelViewer src={item.model} controls={false} /></div>
         )}

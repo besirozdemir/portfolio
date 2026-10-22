@@ -1,8 +1,8 @@
 // ✏️ Kişisel bilgiler burada. Galeri/proje/CV/fotoğraf → src/content klasörü (README.md'ye bak)
 
 export const profile = {
-  first: 'Beşir',
-  last: 'ÖZDEMİR',            // <- adını/soyadını buradan düzelt
+  first: 'Ercüment',
+  last: 'Soyadın',            // <- adını/soyadını buradan düzelt
   title: 'Mechanical Engineer',
 }
 
@@ -16,8 +16,8 @@ export const socials = {
 
 // start/end: 'YYYY-AA'. Sıralama otomatik (en yeni üstte).
 export const experiences = [
-  { start: '2021-10', end: '2022-08', role: 'Team Leader', team: 'HÜRKUŞ Roket Takımı', event: 'Teknofest Roket Yarışması · Lise Kategorisi', skills: ['CAD', 'Takım Liderliği'] },
   { start: '2022-03', end: '2022-08', role: 'Mechanical Leader', team: 'MAVERA UAV Team', event: 'Teknofest İHA Yarışması · Lise Kategorisi', skills: ['CAD', 'Teknik Resim'] },
+  { start: '2021-10', end: '2022-08', role: 'Team Leader', team: 'HÜRKUŞ Roket Takımı', event: 'Teknofest Roket Yarışması · Lise Kategorisi', skills: ['CAD', 'Takım Liderliği'] },
   { start: '2021-05', end: '2024-07', role: 'Öğrenci', team: 'Deneyap Teknoloji Atölyeleri', event: 'Türkiye Teknoloji Takımı Vakfı', skills: ['CAD', 'Fusion 360'] },
   { start: '2020-10', end: '2021-11', role: 'CAD Designer', team: 'Tanyeli UAV Team', event: 'Teknofest İHA Yarışması · Lise Kategorisi', skills: ['CAD', 'SolidWorks'] },
   { start: '2020-01', end: '2020-10', role: 'CAD & Mechanical Leader', team: 'Şahkartallar UAV Team', event: 'TÜBİTAK 2020 İHA Yarışması', skills: ['CAD', 'SolidWorks'] },
@@ -26,12 +26,12 @@ export const experiences = [
 
 // level: 1 Beginner · 2 Intermediate · 3 Advanced   (label ile yazıyı değiştirebilirsin)
 export const tools = [
-  { name: 'SolidWorks', level: 2, label: 'CSWA Certified' },
-  { name: 'CATIA V5', level: 1 },
-  { name: 'ANSYS Mechanical', level: 1 },
-  { name: 'XFLR5', level: 1 },
-  { name: 'MATLAB', level: 1 },
-  { name: 'OpenRocket', level: 3 },
+  { name: 'SolidWorks', level: 3, label: 'CSWA Certified' },
+  { name: 'CATIA V5', level: 2 },
+  { name: 'ANSYS Mechanical', level: 2 },
+  { name: 'XFLR5', level: 2 },
+  { name: 'MATLAB', level: 2 },
+  { name: 'OpenRocket', level: 2 },
   { name: 'Python', level: 2 },
   { name: 'Microsoft Excel', level: 1 },
 ]

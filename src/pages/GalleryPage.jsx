@@ -5,6 +5,7 @@ import { ArrowLeft, Download, Play, X } from 'lucide-react'
 import Heading from '../components/Heading'
 import GalleryCard from '../components/GalleryCard'
 import ModelViewer from '../components/ModelViewer'
+import ThumbMedia from '../components/ThumbMedia'
 import { gallery, programs } from '../lib/content'
 
 function Modal({ item, onClose }) {
@@ -23,9 +24,9 @@ function Modal({ item, onClose }) {
             <iframe title={item.title} className="h-full w-full" src={`https://www.youtube.com/embed/${item.youtube}?autoplay=1&rel=0`} allow="autoplay; encrypted-media; fullscreen" allowFullScreen />
           ) : item.model ? (
             <ModelViewer src={item.model} />
-          ) : item.thumb ? (
-            <img src={item.thumb} alt={item.title} className="h-full w-full object-contain" />
-          ) : null}
+          ) : (
+            <ThumbMedia item={item} controls />
+          )}
         </div>
         <div className="flex flex-col gap-4 p-6 md:flex-row md:items-end md:justify-between">
           <div>

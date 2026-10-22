@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import Heading from './Heading'
+import ThumbMedia from './ThumbMedia'
 import { gallery, programs } from '../lib/content'
 
 export default function GalleryTeaser() {
@@ -31,7 +32,7 @@ export default function GalleryTeaser() {
         <div className="grid grid-cols-3 gap-3">
           {latest.map((g) => (
             <Link key={`${g.program}/${g.slug}`} to={`/galeri?p=${g.program}`} className="aspect-square overflow-hidden rounded-2xl bg-neutral-900">
-              {g.thumb && <img src={g.thumb} alt={g.title} loading="lazy" className="h-full w-full object-cover transition duration-500 hover:scale-110" />}
+              <div className="relative h-full w-full transition duration-500 hover:scale-110"><ThumbMedia item={g} /></div>
             </Link>
           ))}
         </div>

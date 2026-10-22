@@ -9,7 +9,8 @@ gallery/
   solidworks/
     krank-mili/
       info.json      (zorunlu)  başlık, açıklama, youtube linki
-      thumb.jpg      (önerilir) kapak görseli (.png/.webp/.svg de olur)
+      thumb.mp4      (önerilir) kapak videosu, sessiz döngü (.webm de olur)
+      thumb.jpg      (ops.)     kapak görseli; video yüklenene kadar görünür, video yoksa tek başına kullanılır
       model.glb      (önerilir) tarayıcıda döndürülen 3D model
       source.sldprt  (ops.)     indirilebilir orijinal CAD dosyası (source.zip, source.step ...)
   catia/
@@ -22,6 +23,7 @@ gallery/
   (SolidWorks'te glTF/GLB olarak kaydet, ya da STEP dosyasını Blender veya online dönüştürücüyle GLB yap).
   Orijinal CAD dosyasını `source.*` adıyla koyarsan ziyaretçiler indirebilir.
 - GLB dosyalarını mümkünse 10 MB altında tut (GitHub dosya sınırı 100 MB).
+- Video notu: H.264 kodlu .mp4 kullan (HEVC/H.265 Chrome'da oynamaz). 720p, 5-8 sn, 1-3 MB ideal.
 - "ornek-" ile başlayan klasörler örnektir, silebilirsin.
 
 ## 2) Projeler: projects/<sıra>-<ad>/

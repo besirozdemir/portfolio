@@ -13,6 +13,7 @@ export function youtubeId(v = '') {
 // ---- Galeri
 const gInfos = import.meta.glob('/src/content/gallery/*/*/info.json', { eager: true, import: 'default' })
 const gThumbs = byDir(import.meta.glob('/src/content/gallery/*/*/thumb.{jpg,jpeg,png,webp,svg}', { eager: true, query: '?url', import: 'default' }))
+const gVideos = byDir(import.meta.glob('/src/content/gallery/*/*/thumb.{mp4,webm}', { eager: true, query: '?url', import: 'default' }))
 const gModels = byDir(import.meta.glob('/src/content/gallery/*/*/model.{glb,gltf}', { eager: true, query: '?url', import: 'default' }))
 const gSources = byDir(import.meta.glob('/src/content/gallery/*/*/source.*', { eager: true, query: '?url', import: 'default' }))
 
@@ -29,6 +30,7 @@ export const gallery = Object.entries(gInfos)
       date: info.date || '',
       youtube: youtubeId(info.youtube),
       thumb: gThumbs[d],
+      video: gVideos[d],
       model: gModels[d],
       source: gSources[d],
     }
